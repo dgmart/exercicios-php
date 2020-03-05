@@ -19,3 +19,13 @@ $rendimento = readline('Rendimento médio últimos 12 meses: ');
 
 // exemplo de saída de números com formatação para linha de comando
 echo 'Rendimento do cliente: ' . number_format($rendimento, 2, ',', '.') . PHP_EOL;
+
+if ($rendimento > 3000 ) {
+    echo 'Crédito: 50% do rendimento médio'  . PHP_EOL;
+} elseif ($rendimento > 1000 && $rendimento <= 3000) {
+    echo 'Crédito: 40% do rendimento médio'  . PHP_EOL;
+} elseif ($rendimento > 500 && $rendimento <= 1000 ) {
+    echo 'Crédito: 30% do rendimento médio'  . PHP_EOL;
+} elseif ($rendimento <= 500) {
+    echo 'Nenhum crédito' . "\n";
+}
