@@ -25,7 +25,7 @@ echo '' . "\n";
 
 if($idade >= 18 && $idade < 65) {
     echo 'Idade: ' . $idade . "\n" . 'Classe: eleitor obrigatório';
-} elseif ($idade > 16 && $idade < 18 && $idade >= 65 ) {
+} elseif (($idade >= 16 && $idade < 18) || $idade >= 65 ) {
     echo 'Idade: ' . $idade . "\n" . 'Classe: eleitor facultativo';
 } else {
     echo 'Idade: ' . $idade . "\n" . 'Classe: não eleitor';
